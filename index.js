@@ -45,6 +45,10 @@ io.on('connection', (socket) => {
     io.emit('buzzes', [...data.buzzes])
     console.log(`Clear buzzes`)
   })
+
+  socket.on('disconnecting', () => {
+    io.emit('user-disconnect')
+  });
 })
 
 server.listen(8090, () => console.log('Listening on 8090'))

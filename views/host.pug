@@ -10,6 +10,7 @@ html
 
     div.container
       h2.js-active=`${users.length} joined`
+      p.js-disconnect=``
       ol.js-buzzes
         each buzz in buzzes
           li=`${buzz.name} on Team ${buzz.team}`
